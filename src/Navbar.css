@@ -1,0 +1,13 @@
+.navbar {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar > input {
+    height: 2rem;
+    width: 20rem;
+    margin-left: 5%;
+}

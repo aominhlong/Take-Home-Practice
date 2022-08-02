@@ -3,15 +3,17 @@ import ArticleDetails from './ArticleDetails';
 import './ArticlesContainer.css'
 
 const ArticlesContainer = ({ data }) => {
-    console.log(data)
     const articles = data.map(article => {
-        return <div className='article'>
-            <h3>{article.title}</h3>
-            <p>{article.abstract}</p>
-        </div>
+        if (article.title && article.abstract) {
+            return <div className='indiv-article' key={data.indexOf(article)}>
+                <h3>{article.title}</h3>
+                <p>{article.abstract}</p>
+                <p className='link-to-article'>see more</p>
+            </div>
+        }
     })
     return (
-        <div>
+        <div className='all-article'>
             { articles }
         </div>
     )

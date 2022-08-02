@@ -18,10 +18,12 @@ const App = () => {
   }, [])
 
   console.log('hi', allData)
+  console.log(genre)
   return (
     <div className="App">
-      <h1>NY Times Top Stories</h1>
+      <h1 className='title'>NY Times Top Stories</h1>
       <Navbar />
+      <h2>Currently looking at: {genre.charAt(0).toUpperCase()+ genre.slice(1)} News</h2>
       <ArticlesContainer data={ allData } />
     </div>
   );

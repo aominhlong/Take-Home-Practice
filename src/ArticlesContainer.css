@@ -1,0 +1,15 @@
+.all-article {
+    border: 2px solid blue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.indiv-article {
+    border: 2px solid grey;
+    margin: 0.5rem;
+}
+
+.link-to-article {
+    font: italic;
+    color: rgb(76, 130, 230);
+}

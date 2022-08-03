@@ -2,7 +2,8 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import ArticlesContainer from './ArticlesContainer';
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import ArticleDetails from './ArticleDetails';
 
 const App = () => {
 
@@ -23,20 +24,27 @@ const App = () => {
   const searchArticles = (keyword) => {
     console.log(filteredData.length)
     const filteredList = allData.filter(data => {
-      return data.abstract.includes(keyword) 
+      return data.abstract.includes(keyword) || data.title.includes(keyword)
     })
     setFilteredData(filteredList)
   }
-  
+  console.log(allData)
   return (
     <div className="App">
-      <h1 className='title'>NY Times Top Stories</h1>
+      <Link to='/'>
+        <h1 className='title'>NY Times Top Stories</h1>
+      </Link>
       <Navbar setFilteredData={ setFilteredData } searchArticles={ searchArticles } text={text} setText={setText}/>
       <h2>Currently looking at: { genre.charAt(0).toUpperCase()+ genre.slice(1) } News</h2>
       <Route exact path="/" render={() => {
-        <ArticlesContainer data={ allData } />
-      }}></Route>
-      { filteredData.length >= 1 && <ArticlesContainer data={ filteredData } /> }
+        return <ArticlesContainer data={ allData } />
+      }} />
+      {/* { filteredData.length >= 1 && <ArticlesContainer data={ filteredData } /> } */}
+      <Route exact path="/article/:id" render={({ match }) => {
+        const specificArticle = allData[match.params.id]
+        return <ArticleDetails specificArticle={ specificArticle }/>
+        }
+      } />
     </div>
   );
 }

@@ -5,7 +5,7 @@ const ArticleDetails = ({ specificArticle }) => {
     console.log('articledetails prop', specificArticle)
 
     const addUrl = (url) => {
-        window.location.href = url
+        window.open(`${url}`)
     }
 
     return (

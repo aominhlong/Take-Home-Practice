@@ -22,7 +22,6 @@ const App = () => {
   }, [])
 
   const searchArticles = (keyword) => {
-    console.log(filteredData.length)
     const filteredList = allData.filter(data => {
       return data.abstract.includes(keyword) || data.title.includes(keyword)
     })

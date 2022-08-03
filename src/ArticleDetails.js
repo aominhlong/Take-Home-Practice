@@ -11,7 +11,7 @@ const ArticleDetails = ({ specificArticle }) => {
     return (
         <div>
             <h1>{ specificArticle.title }</h1>
-            <img src={ specificArticle.multimedia[0] }></img>
+            <img src={ specificArticle.multimedia[0].url}></img>
             <p>{ specificArticle.abstract }</p>
             <p>View full article <span className='full-article' onClick={() => addUrl(specificArticle.url)}>here</span></p>
             <p>{ specificArticle.published_date }</p>

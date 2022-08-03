@@ -27,8 +27,7 @@ const App = () => {
     })
     setFilteredData(filteredList)
   }
-  console.log(allData)
-  console.log('length: ',text.length)
+
   return (
     <div className="App">
       <Link to='/'>

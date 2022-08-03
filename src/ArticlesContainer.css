@@ -13,3 +13,7 @@
     font: italic;
     color: rgb(76, 130, 230);
 }
+
+.link-to-article:hover {
+    text-decoration: underline;
+}

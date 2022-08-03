@@ -28,6 +28,7 @@ const App = () => {
     setFilteredData(filteredList)
   }
   console.log(allData)
+  console.log('length: ',text.length)
   return (
     <div className="App">
       <Link to='/'>
@@ -35,10 +36,9 @@ const App = () => {
       </Link>
       <Navbar setFilteredData={ setFilteredData } searchArticles={ searchArticles } text={text} setText={setText}/>
       <h2>Currently looking at: { genre.charAt(0).toUpperCase()+ genre.slice(1) } News</h2>
-      <Route exact path="/" render={() => {
-        return <ArticlesContainer data={ allData } />
-      }} />
-      {/* { filteredData.length >= 1 && <ArticlesContainer data={ filteredData } /> } */}
+      <Route exact path="/" render={() => 
+        !text.length ? <ArticlesContainer data={ allData } /> : <ArticlesContainer data={ filteredData } />
+      } />
       <Route exact path="/article/:id" render={({ match }) => {
         const specificArticle = allData[match.params.id]
         return <ArticleDetails specificArticle={ specificArticle }/>

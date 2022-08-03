@@ -8,7 +8,7 @@ const ArticlesContainer = ({ data }) => {
             return <div className='indiv-article' key={data.indexOf(article)}>
                 <h3>{article.title}</h3>
                 <p>{article.abstract}</p>
-                <p className='link-to-article'>see more</p>
+                <p className='link-to-article' id={data.indexOf(article)}>see more</p>
             </div>
         }
     })

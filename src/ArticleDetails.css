@@ -1,0 +1,7 @@
+.full-article {
+    text-decoration: underline;
+}
+
+.full-article:hover {
+    cursor: pointer;
+}

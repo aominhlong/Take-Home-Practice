@@ -2,17 +2,17 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import ArticlesContainer from './ArticlesContainer';
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import ArticleDetails from './ArticleDetails';
 
 const App = () => {
 
   const [allData, setAllData] = useState([])
   const [filteredData, setFilteredData] = useState([])
-  const [genre, setGenre] = useState('world')
   const [text, setText] = useState('')
 
   useEffect(() => {
-      fetch(`https://api.nytimes.com/svc/topstories/v2/${genre}.json?api-key=zFAFLWv8eNjlWC8oPAFmHbme0aAvA6RZ`)
+      fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=zFAFLWv8eNjlWC8oPAFmHbme0aAvA6RZ`)
       .then(res => res.json())
       .then(data => {
         setAllData(data.results)
@@ -21,22 +21,26 @@ const App = () => {
   }, [])
 
   const searchArticles = (keyword) => {
-    console.log(filteredData.length)
     const filteredList = allData.filter(data => {
-      return data.abstract.includes(keyword) 
+      return data.title.toUpperCase().includes(keyword.toUpperCase())
     })
     setFilteredData(filteredList)
   }
-  
+
   return (
     <div className="App">
-      <h1 className='title'>NY Times Top Stories</h1>
+      <Link to='/'>
+        <h1 className='title'>NY Times World Top Stories</h1>
+      </Link>
       <Navbar setFilteredData={ setFilteredData } searchArticles={ searchArticles } text={text} setText={setText}/>
-      <h2>Currently looking at: { genre.charAt(0).toUpperCase()+ genre.slice(1) } News</h2>
-      <Route exact path="/" render={() => {
-        <ArticlesContainer data={ allData } />
-      }}></Route>
-      { filteredData.length >= 1 && <ArticlesContainer data={ filteredData } /> }
+      <Route exact path="/" render={() => 
+        !text.length ? <ArticlesContainer data={ allData } /> : <ArticlesContainer data={ filteredData } />
+      } />
+      <Route exact path="/article/:id" render={({ match }) => {
+        const specificArticle = allData[match.params.id]
+        return <ArticleDetails specificArticle={ specificArticle }/>
+        }
+      } />
     </div>
   );
 }

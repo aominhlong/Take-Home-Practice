@@ -7,4 +7,13 @@
 .title {
   font-family: 'NewsReader', seriff;
   font-size: 4rem;
+  color: black;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }

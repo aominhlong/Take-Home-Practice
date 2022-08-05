@@ -7,7 +7,7 @@ const Navbar = ({ searchArticles, text, setText }) => {
     return (
         <div className='navbar'>
             <Link to='/'>
-                <button className='home-btn'>Home</button>
+                <button className='home-btn' onClick={() => setText('')}>Home</button>
             </Link>
             <input 
             value={ text }

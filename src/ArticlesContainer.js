@@ -2,7 +2,6 @@ import './ArticlesContainer.css'
 import { Link } from 'react-router-dom'
 
 const ArticlesContainer = ({ data }) => {
-    console.log(data)
     const articles = data.map(article => {
         if (article.title && article.abstract && article.multimedia) {
             return <div className='indiv-article' key={data.indexOf(article)}>

@@ -16,41 +16,23 @@ const App = () => {
       .then(res => res.json())
       .then(data => {
         setAllData(data.results)
-        setFilteredData(data.results)
       })
   }, [])
 
   const searchArticles = (keyword) => {
     const filteredList = allData.filter(data => {
+      console.log(data.title.toUpperCase())
+      console.log(text)
+      console.log(keyword.toUpperCase())
       return data.title.toUpperCase().includes(keyword.toUpperCase())
     })
     setFilteredData(filteredList)
   }
 
-  // return (
-  //   <div className="App">
-  //     <Link to='/'>
-  //       <h1 className='title'>NY Times World Top Stories</h1>
-  //     </Link>
-  //     <Navbar searchArticles={ searchArticles } text={text} setText={setText}/>
-  //     <Route exact path="/" render={() => 
-  //       !text.length ? <ArticlesContainer data={ allData } /> : <ArticlesContainer data={ filteredData } />
-  //     } />
-  //     <Route exact path="/article/:id" render={({ match }) => {
-  //       const specificArticle = allData[match.params.id]
-  //       return <ArticleDetails specificArticle={ specificArticle }/>
-  //       }
-  //     } />
-  //     <Redirect to='/'>
-  //     </Redirect>
-  //   </div>
-  // );
-  
   return (
     <div className="App">
-      {/* <Switch> */}
       <Link to='/'>
-        <h1 className='title'>NY Times World Top Stories</h1>
+        <h1 className='title' onClick={() => setText('')}>NY Times World Top Stories</h1>
       </Link>
       <Navbar searchArticles={ searchArticles } text={text} setText={setText}/>
       <Route exact path="/" render={() => 
@@ -61,11 +43,11 @@ const App = () => {
         return <ArticleDetails specificArticle={ specificArticle }/>
         }
       } />
-      {/* <Redirect to='/error'>
-      </Redirect> */}
-      {/* </Switch> */}
+      <Redirect to='/'>
+      </Redirect>
     </div>
   );
+  
 
 }
 

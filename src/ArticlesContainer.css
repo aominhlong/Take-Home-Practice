@@ -1,11 +1,13 @@
 .all-article {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.3rem;
+    justify-items: center;
 }
 
 .indiv-article {
-    border: 2px solid grey;
+    width: 30rem;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -14,8 +16,9 @@
 
 .link-to-article {
     font: italic;
-    color: rgb(76, 130, 230);
-    margin: 1rem;
+    font-weight: 700;
+    color: rgb(33, 94, 208);
+    margin-bottom: 1rem;
 }
 
 .link-to-article:hover {
@@ -23,7 +26,14 @@
 }
 
 .article-img-preview {
-    height: 15rem;
+    height: 18rem;
     width: 20rem;
     margin-top: 1rem;
+    border: 1px solid black;
+}
+
+.article-home-title {
+    height: 4rem;
+    margin: 0.3rem;
+    margin-top: 0.8rem;
 }

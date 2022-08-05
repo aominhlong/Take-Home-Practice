@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './ArticleDetails.css'
 
 const ArticleDetails = ({ specificArticle }) => {
-    console.log('articledetails prop', specificArticle)
 
     const addUrl = (url) => {
         window.open(`${url}`)

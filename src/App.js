@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import ArticlesContainer from './ArticlesContainer';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Redirect } from 'react-router-dom'
 import ArticleDetails from './ArticleDetails';
 
 const App = () => {
@@ -32,7 +32,7 @@ const App = () => {
       <Link to='/'>
         <h1 className='title'>NY Times World Top Stories</h1>
       </Link>
-      <Navbar setFilteredData={ setFilteredData } searchArticles={ searchArticles } text={text} setText={setText}/>
+      <Navbar searchArticles={ searchArticles } text={text} setText={setText}/>
       <Route exact path="/" render={() => 
         !text.length ? <ArticlesContainer data={ allData } /> : <ArticlesContainer data={ filteredData } />
       } />
@@ -41,6 +41,8 @@ const App = () => {
         return <ArticleDetails specificArticle={ specificArticle }/>
         }
       } />
+      <Redirect to='/'>
+      </Redirect>
     </div>
   );
 }

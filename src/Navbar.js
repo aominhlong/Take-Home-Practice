@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ searchArticles, setFilteredData, text, setText }) => {
-    // const [text, setText] = useState('')
+const Navbar = ({ searchArticles, text, setText }) => {
 
     return (
         <div className='navbar'>

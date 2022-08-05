@@ -19,6 +19,10 @@ describe('empty spec', () => {
     cy.get('input').type('japan')
     cy.get('.all-article').children().should('have.length', 1)
   }),
+  it('should show a message when there are no search results', () => {
+    cy.get('input').type('mno')
+    cy.get('.all-article > h1').should('have.text', 'Sorry, there are no current results.')
+  }),
   it('should clear the input field', () => {
     cy.get('input').type('japan')
     cy.get('input').should('have.text', '')

@@ -15,6 +15,7 @@ const App = () => {
       fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=zFAFLWv8eNjlWC8oPAFmHbme0aAvA6RZ`)
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setAllData(data.results)
         setFilteredData(data.results)
       })

@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import ArticlesContainer from './ArticlesContainer';
-import { Route, Link, Redirect } from 'react-router-dom'
+import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import ArticleDetails from './ArticleDetails';
 
 const App = () => {
@@ -15,14 +15,15 @@ const App = () => {
       fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=zFAFLWv8eNjlWC8oPAFmHbme0aAvA6RZ`)
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setAllData(data.results)
-        setFilteredData(data.results)
       })
   }, [])
 
   const searchArticles = (keyword) => {
     const filteredList = allData.filter(data => {
+      console.log(data.title.toUpperCase())
+      console.log(text)
+      console.log(keyword.toUpperCase())
       return data.title.toUpperCase().includes(keyword.toUpperCase())
     })
     setFilteredData(filteredList)
@@ -31,7 +32,7 @@ const App = () => {
   return (
     <div className="App">
       <Link to='/'>
-        <h1 className='title'>NY Times World Top Stories</h1>
+        <h1 className='title' onClick={() => setText('')}>NY Times World Top Stories</h1>
       </Link>
       <Navbar searchArticles={ searchArticles } text={text} setText={setText}/>
       <Route exact path="/" render={() => 
@@ -46,6 +47,8 @@ const App = () => {
       </Redirect>
     </div>
   );
+  
+
 }
 
 export default App;

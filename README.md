@@ -15,10 +15,6 @@ This application was created to allow users to view the World Top Stories for th
 - CSS
 - Cypress
 
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Wireframe
 Figma was used to create a simple wireframe of the application which can be viewed below.
 
@@ -77,7 +73,6 @@ Testing was done using Cypress and tested the full user flow for the application
 </table>
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
-<!--
  
 
  

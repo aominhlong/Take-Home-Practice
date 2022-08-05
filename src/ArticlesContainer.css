@@ -34,6 +34,24 @@
 
 .article-home-title {
     height: 4rem;
+    font-size: 1.2rem;
     margin: 0.3rem;
     margin-top: 0.8rem;
+}
+
+
+.see-more-btn {
+    border: none;
+    background: none;
+}
+
+.see-more {
+    color: rgb(33, 94, 208);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import './ArticleDetails.css'
 
 const ArticleDetails = ({ specificArticle }) => {
-    console.log('articledetails prop', specificArticle)
 
     const addUrl = (url) => {
         window.open(`${url}`)
     }
 
+    const articleDate = specificArticle.published_date.split('T').splice(0,1)
+
     return (
         <div>
             <h1>{ specificArticle.title }</h1>
-            <img src={ specificArticle.multimedia[0].url}></img>
+            <img className='article-img' src={ specificArticle.multimedia[0].url}></img>
             <br></br>
             <p>{ specificArticle.abstract }</p>
-            <p>View full article <span className='full-article' onClick={() => addUrl(specificArticle.url)}>here</span></p>
-            <p>{ specificArticle.published_date }</p>
+            <p>Published: { articleDate[0] }</p>
+            <h4 className='view-article-link'>View full article <span className='full-article' onClick={() => addUrl(specificArticle.url)}>here</span></h4>
         </div>
     )
 }

@@ -9,9 +9,14 @@
 .navbar > input {
     height: 2rem;
     width: 20rem;
-    margin-left: 5%;
+    margin-left: 1rem;
 }
 
 .clear-search {
     margin-left: 1rem;
+}
+
+.home-btn {
+    margin-left: 1rem;
+    height: 2rem;
 }

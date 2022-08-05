@@ -5,3 +5,11 @@
 .full-article:hover {
     cursor: pointer;
 }
+
+.article-img {
+    height: 50rem;
+}
+
+.view-article-link {
+    margin-top: 2rem;
+}

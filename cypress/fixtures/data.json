@@ -1,0 +1,73 @@
+{
+  "status": "OK", 
+  "copyright": "Copyright (c) 2022 The New York Times Company. All Rights Reserved.", 
+  "section": "World News", "last_updated": "2022-08-04T15:04:39-04:00", "num_results": 35,
+  "results": [ 
+    {
+    "abstract": "A day after Nancy Pelosi’s trip, China has begun military drills near Taiwan. They appear to be designed as a trial run for sealing off the island. Five missiles landed in Japanese waters.",
+    "byline": "By Chris Buckley, Amy Chang Chien, Eric Schmitt and David E. Sanger",
+    "created_date": "2022-08-03T21:44:46-04:00",
+    "des_facet": [],
+    "geo_facet": ["Taiwan", "China"],
+    "item_type": "Article",
+    "kicker": "",
+    "material_type_facet": "",
+    "multimedia": [{
+      "caption": "Chinese military helicopters off the shore of Fujian Province, just across the strait from Taiwan, on Thursday.",
+      "copyright": "Hector Retamal/Agence France-Presse — Getty Images",
+      "format": "Super Jumbo",
+      "height": 1365,
+      "subtype": "photo",
+      "type": "image",
+      "url": "https://static01.nyt.com/images/2022/08/04/world/04taiwan-drills-sub1/04taiwan-drills-sub1-superJumbo-v3.jpg",
+      "width": 2048
+    }],
+    "published_date": "2022-08-03T21:44:46-04:00",
+    "title": "Chinese Missiles Strike Seas Off Taiwan, and Soåme Land Near Japan",
+    "url": "https://www.nytimes.com/2022/08/03/world/asia/taiwan-china-military-exercises.html"
+    }, 
+    {
+      "abstract": "A deal allowing ships to start carrying grain from Ukraine solved a logistical problem, but it left a more pressing one for Ukrainian farmers: growing and reaping crops in a war zone.",
+      "byline": "By Andrew E. Kramer and David Guttenfelder",
+      "created_date": "2022-08-04T00:01:18-04:00",
+    "multimedia": [
+      {
+        "caption": "In the fields on a recent, sweltering afternoon during the harvest, flames crackled through the stubble of the recently harvested wheat crop of Vasily Tabachnyuk, picking up with gusts of wind.",
+        "copyright": "David Guttenfelder for The New York Times",
+        "format": "Super Jumbo",
+        "height": 1366,
+        "subtype": "photo",
+        "type": "image",
+        "url": "https://static01.nyt.com/images/2022/08/03/world/03UkraineFarmingPromo/merlin_210921504_80be4cf5-f2f6-4528-9fce-259d6bceb410-superJumbo.jpg",
+        "width": 2048 
+      }
+    ],
+    "per_facet": ["Zelensky, Volodymyr"],
+    "published_date": "2022-08-04T00:01:18-04:00",
+    "title": "Mines, Fires, Rockets: The Ravages of War Bedevil Ukraine’s Farmers",
+    "url": "https://www.nytimes.com/2022/08/04/world/europe/ukraine-russia-farms-farming-wheat-barley.html"
+
+    }, 
+    {
+      "abstract": "Experts said the pledge to reduce emissions by at least 43 percent from 2005 levels by 2030 was both a leap forward and a first step.",
+      "byline": "By Damien Cave",
+      "multimedia":[
+        { 
+        "caption": "Australia is one of the most vulnerable countries to the ravages of climate change.",
+        "copyright": "Matthew Abbott for The New York Times",
+        "format": "Super Jumbo",
+        "height": 1365,
+        "subtype": "photo",
+        "type": "image",
+        "url": "https://static01.nyt.com/images/2022/08/04/world/04oz-climate/merlin_198944100_2fd945e4-932d-49bc-a801-7cb7e7ae478e-superJumbo.jpg",
+        "width": 2048
+        }
+      ],
+      "published_date": "2022-08-04T03:37:22-04:00",
+      "title": "Long a Climate Straggler, Australia Advances a Major Bill to Cut Emissions",
+      "url": "https://www.nytimes.com/2022/08/04/world/australia/climate-bill.html"
+    } 
+  ],
+  "section": "World News",
+  "status": "OK"
+}

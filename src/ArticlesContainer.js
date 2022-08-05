@@ -8,11 +8,11 @@ const ArticlesContainer = ({ data }) => {
             return <div className='indiv-article' key={data.indexOf(article)}>
                <img className='article-img-preview' src={ article.multimedia[0].url } alt='article image'/> 
                 <h3 className='article-home-title'>{article.title}</h3>
-                <Link to={`article/${data.indexOf(article)}`} 
-                className='link-to-article' 
-                id={data.indexOf(article)}
-                >see more</Link>
-                <hr className='line'></hr>
+                <Link to={`article/${data.indexOf(article)}`}>
+                <button className={data.indexOf(article)} id={data.indexOf(article)}>
+                see more
+                </button> 
+                </Link>
             </div>
         }
     })

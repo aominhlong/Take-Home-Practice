@@ -21,9 +21,6 @@ const App = () => {
 
   const searchArticles = (keyword) => {
     const filteredList = allData.filter(data => {
-      console.log(data.title.toUpperCase())
-      console.log(text)
-      console.log(keyword.toUpperCase())
       return data.title.toUpperCase().includes(keyword.toUpperCase())
     })
     setFilteredData(filteredList)

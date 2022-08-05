@@ -23,7 +23,7 @@ Figma was used to create a simple wireframe of the application which can be view
 ## Testing
 Testing was done using Cypress and tested the full user flow for the application.
 
-![Cypress Tests](https://user-images.githubusercontent.com/89413678/183110736-96590753-72ac-4e91-86d5-395937b68e62.png)
+![All tests](https://user-images.githubusercontent.com/89413678/183127151-05503549-1cca-45d4-884f-d0beef80c38c.png)
 
 ## Set Up
 

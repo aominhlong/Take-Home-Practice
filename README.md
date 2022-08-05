@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<div align="center">
+<h1> Welcome to the NY World Top Stories Application! </h1>
+</div>
+
+<br>
+
+
+# Intro
+This application was created to allow users to view the World Top Stories for the NY Times. This application was built for the take-home 8-hour sprint challenge as part of the curriculum of Module 4 of Turing School of Software and Design. 
+
+# Technologies Used
+- React
+- JavaScript
+- HTML
+- CSS
+- Cypress
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Wireframe
+Figma was used to create a simple wireframe of the application which can be viewed below.
 
-In the project directory, you can run:
+![Wireframe](https://user-images.githubusercontent.com/89413678/183110302-90c11966-a4b3-48a9-80d9-edf08008a2ab.png)
 
-### `npm start`
+## Testing
+Testing was done using Cypress and tested the full user flow for the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Cypress Tests](https://user-images.githubusercontent.com/89413678/183110736-96590753-72ac-4e91-86d5-395937b68e62.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Set Up
 
-### `npm test`
+ 1. Start by going [here](https://github.com/aominhlong/Take-Home-Practice). From here, you will want to click on the green rectangular button titled 'Code'. This should open a drop down menu where you should see a link. To the left of the link there should be an icon with two over lapping squares. You can click the icon to copy the link.
+ 2. You will want to clone down the repo to you terminal using `git clone git@github.com:aominhlong/Take-Home-Practice.git`.
+ 3. Once you have cloned the repo, change into the directory and install the project dependencies. Run `npm install` or `npm i` to install project dependencies.
+ 4. Run `npm start` in the terminal to see the page. You will need to copy and paste the local server from the terminal and paste it into your browser. The local server should be similiar to, "http://localhost:3000/". `Control + C` is the command to stop running the local server. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ## Features
+ 
+ ### Landing Page
+ 
+![Homepage](https://user-images.githubusercontent.com/89413678/183111073-7659a4ff-f555-4f58-ab7f-afeac4b4a525.png)
+ 
+ - When you first visit the landing page for the application, you will see the homepage of the application featuring the application's name, search bar, home button, and all of the articles available.
+ 
+ ### Searching for an Article
+ 
+![Search](https://user-images.githubusercontent.com/89413678/183111712-7d0911b5-e7e0-480f-b7a9-ac1905b2e7fc.gif)
+ 
+ - To search for a specific article, the user can type something in the search input field. The articles displaying should filter and show articles based off the user input.
+ - To clear the input field, the user can click the `clear` button. 
+ 
+ ### Specific Article Page
+ 
+![Specific Article](https://user-images.githubusercontent.com/89413678/183112474-45edadb9-218e-41f8-b785-3f4d6a23e54f.gif)
+ 
+- To view a specific article, the user can click on `see more` below the title of an article. It will then take them to the specific article detail page. 
+ 
+ ### Go Home
+ 
+![Go Home](https://user-images.githubusercontent.com/89413678/183112717-417fc807-5a66-497c-80b7-673ddc0fde49.gif)
+ 
+ - To go back back to the homepage, the user can click the `home` button OR click the `title` of the App
 
-### `npm run build`
+## Future features:
+ - Add more error handling
+ - Add more styling
+ - Sort articles by date
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# **The Team ✨**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<table>
+<tr>
+  <td align="center"><a href="https://github.com/aominhlong"><img src="https://avatars.githubusercontent.com/u/89413678?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas A. (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/nicholas-ao/" title ="Linked In"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a><br /><a href="https://github.com/PupTrainer/fe_puptrainer/commits?author=aominhlong" title="Code">💻</a></td>
+</tr>
+</table>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+<!--
+ 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
+ 
+ 
+ 

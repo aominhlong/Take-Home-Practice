@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import ArticlesContainer from './ArticlesContainer';
-import { Route, Link, Redirect } from 'react-router-dom'
+import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import ArticleDetails from './ArticleDetails';
 
 const App = () => {
@@ -15,7 +15,6 @@ const App = () => {
       fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=zFAFLWv8eNjlWC8oPAFmHbme0aAvA6RZ`)
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setAllData(data.results)
         setFilteredData(data.results)
       })
@@ -28,8 +27,28 @@ const App = () => {
     setFilteredData(filteredList)
   }
 
+  // return (
+  //   <div className="App">
+  //     <Link to='/'>
+  //       <h1 className='title'>NY Times World Top Stories</h1>
+  //     </Link>
+  //     <Navbar searchArticles={ searchArticles } text={text} setText={setText}/>
+  //     <Route exact path="/" render={() => 
+  //       !text.length ? <ArticlesContainer data={ allData } /> : <ArticlesContainer data={ filteredData } />
+  //     } />
+  //     <Route exact path="/article/:id" render={({ match }) => {
+  //       const specificArticle = allData[match.params.id]
+  //       return <ArticleDetails specificArticle={ specificArticle }/>
+  //       }
+  //     } />
+  //     <Redirect to='/'>
+  //     </Redirect>
+  //   </div>
+  // );
+  
   return (
     <div className="App">
+      {/* <Switch> */}
       <Link to='/'>
         <h1 className='title'>NY Times World Top Stories</h1>
       </Link>
@@ -42,10 +61,12 @@ const App = () => {
         return <ArticleDetails specificArticle={ specificArticle }/>
         }
       } />
-      <Redirect to='/'>
-      </Redirect>
+      {/* <Redirect to='/error'>
+      </Redirect> */}
+      {/* </Switch> */}
     </div>
   );
+
 }
 
 export default App;

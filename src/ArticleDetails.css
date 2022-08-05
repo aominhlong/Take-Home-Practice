@@ -1,5 +1,6 @@
 .full-article {
     text-decoration: underline;
+    color: blue;
 }
 
 .full-article:hover {
@@ -7,9 +8,21 @@
 }
 
 .article-img {
-    height: 50rem;
+    height: 48rem;
 }
 
 .view-article-link {
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.article-detail {
+    font-size: 1.3rem;
+    width: 80%;
+}
+
+.article-detail-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
